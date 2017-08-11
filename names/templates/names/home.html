@@ -1,0 +1,14 @@
+{% extends "names/header.html" %}
+
+{% block content %}
+    <p>Welcome to The Igbo Site</p>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        First Name: <input name="firstname" type="text" ng-model="firstname"><br>
+        Last Name: <input name="lastname" type="text" ng-model="lastname">
+        {% verbatim %}
+        <h2>{{ firstname + " " + lastname }}</h2>
+        {% endverbatim %}
+    </div>
+
+    {% include "names/includes/htmlsnippet.html" %}
+{% endblock %}
